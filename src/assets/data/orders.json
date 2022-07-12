@@ -1,0 +1,20 @@
+[
+  {
+    "orderID": "F8762",
+    "deliveryAddress": "7801 Tanglewood Drive Elkton, MD 21921",
+    "price": 33.99,
+    "status": "Accepted"
+  },
+  {
+    "orderID": "A9245",
+    "deliveryAddress": "81 High Point Dr. Greenwood, SC 29646",
+    "price": 94.35,
+    "status": "Pending"
+  },
+  {
+    "orderID": "Y7902",
+    "deliveryAddress": "8783 Wakehurst Road Champlin, MN 55316",
+    "price": 6.99,
+    "status": "Declined"
+  }
+]

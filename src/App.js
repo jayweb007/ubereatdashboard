@@ -1,24 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Layout, Image } from "antd";
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import OrderDetails from "./components/OrderDetails";
+import Orders from "./components/Orders";
+import SideMenu from "./components/SideMenu";
+
+const { Content, Footer, Sider } = Layout;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Layout>
+      <Sider style={{ height: "100vh", backgroundColor: "white" }}>
+        <Image
+          src="https://logos-world.net/wp-content/uploads/2020/11/Uber-Eats-Symbol.jpg"
+          preview={false}
+        />
+        <SideMenu />
+      </Sider>
+      <Layout>
+        <Content
+          style={{
+            backgroundColor: "lightgrey",
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Routes>
+            <Route path="" element={<Orders />} />
+            <Route path="order/:id" element={<OrderDetails />} />
+          </Routes>
+        </Content>
+        <Footer
+          style={{
+            textAlign: "center",
+            backgroundColor: "grey",
+          }}
+        >
+          Uber Eat Dashboard ©2022 Created by PSC
+        </Footer>
+      </Layout>
+    </Layout>
   );
 }
 
